@@ -1,0 +1,37 @@
+{
+  "_comment": "Fictitious example. No real company, person or contract. Complete but imperfect: it shows a few gaps.",
+  "label": "Fictitious retailer, customer-service team outsourced to a provider in Morocco",
+  "destination_country": "Morocco",
+  "adequacy_decision": false,
+  "safeguards": ["scc"],
+  "tia_documented": false,
+  "art28_contract": {
+    "in_writing": true,
+    "clauses": {
+      "subject_matter_and_duration": true,
+      "nature_and_purpose": true,
+      "data_types_and_data_subject_categories": true,
+      "documented_instructions": true,
+      "personnel_confidentiality": true,
+      "security_measures_art32": true,
+      "subprocessor_prior_authorisation": false,
+      "subprocessor_flowdown": true,
+      "data_subject_rights_assistance": true,
+      "art32_36_assistance": true,
+      "deletion_or_return": true,
+      "audit_and_inspection": true
+    }
+  },
+  "security_controls": {
+    "encryption_in_transit": true,
+    "pseudonymisation": false,
+    "role_based_access": true,
+    "access_logging": true,
+    "physical_access_control": true,
+    "personal_devices_policy": false,
+    "clean_desk": true
+  },
+  "breach_notification_procedure": true,
+  "data_subject_rights_process": true,
+  "iso27001_scope_verified": false
+}
