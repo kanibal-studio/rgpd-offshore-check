@@ -24,7 +24,7 @@ import sys
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 TOOL_NAME = "rgpd-offshore-check"
 SCHEMA_VERSION = 1
 LANGS = ("en", "fr")
@@ -1277,7 +1277,6 @@ def _render_markdown(report: Report) -> str:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="rgpd_offshore_check.py",
         description=(
             "GDPR checklist for customer-service processing outsourced outside the EU. "
             "Reads a JSON answers file and prints a gap report. Not legal advice, "

@@ -1,5 +1,10 @@
 # rgpd-offshore-check
 
+[![PyPI](https://img.shields.io/pypi/v/rgpd-offshore-check)](https://pypi.org/project/rgpd-offshore-check/)
+[![Python](https://img.shields.io/pypi/pyversions/rgpd-offshore-check)](https://pypi.org/project/rgpd-offshore-check/)
+[![CI](https://github.com/kanibal-studio/rgpd-offshore-check/actions/workflows/ci.yml/badge.svg)](https://github.com/kanibal-studio/rgpd-offshore-check/actions/workflows/ci.yml)
+[![MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/kanibal-studio/rgpd-offshore-check/blob/main/LICENSE)
+
 A small GDPR checklist for outsourcing customer-service or call-centre processing outside the EU/EEA, for example to Morocco, Tunisia or Madagascar. You describe your set-up in a JSON answers file; the tool compares it with a built-in checklist and prints a gap report. Python 3.9+, standard library only, no network access, no file written.
 
 **Not legal advice. Not a certification.** This is a checklist to prepare discussions with your Data Protection Officer (DPO) or legal counsel. A report without blocking gap is not a finding of compliance: it only means that your declared answers show no blocking gap. The controller remains accountable for GDPR compliance wherever the data is processed (Art. 5(2), Art. 24).
@@ -22,6 +27,15 @@ The checklist is tied to the official texts and cites article numbers:
 | Optional evidence | ISO/IEC 27001 | Certificate scope verified. Informational only, never proof of GDPR compliance. |
 
 The tool is **fail-closed**: only a clear JSON `true` satisfies a check. A missing, `null`, unknown or malformed answer (for example the string `"true"`, or a number) is reported as `to_verify`, never as compliant. A **blocking gap** is a blocking item that is either declared absent (`gap`) or not demonstrated (`to_verify`).
+
+## Install
+
+```sh
+pip install rgpd-offshore-check
+rgpd-offshore-check answers.json --lang fr
+```
+
+The package installs the `rgpd-offshore-check` command; from a clone, `python3 rgpd_offshore_check.py` works the same way.
 
 ## Quick start
 
@@ -144,6 +158,15 @@ La checklist s'appuie sur les textes officiels et cite les articles :
 | Preuve facultative | ISO/IEC 27001 | Périmètre du certificat vérifié. À titre informatif seulement, jamais une preuve de conformité au RGPD. |
 
 L'outil est **fail-closed** (échec par défaut) : seul un `true` JSON explicite satisfait un contrôle. Une réponse absente, `null`, inconnue ou mal formée (par exemple la chaîne `"true"` ou un nombre) est signalée `to_verify` (à vérifier), jamais comme conforme. Un **écart bloquant** est un point bloquant déclaré absent (`gap`) ou non démontré (`to_verify`).
+
+## Installation
+
+```sh
+pip install rgpd-offshore-check
+rgpd-offshore-check reponses.json --lang fr
+```
+
+Le paquet installe la commande `rgpd-offshore-check` ; depuis un clone, `python3 rgpd_offshore_check.py` fonctionne de la même façon.
 
 ## Démarrage rapide
 
