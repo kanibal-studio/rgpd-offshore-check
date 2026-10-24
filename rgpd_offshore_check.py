@@ -24,7 +24,7 @@ import sys
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 TOOL_NAME = "rgpd-offshore-check"
 SCHEMA_VERSION = 1
 LANGS = ("en", "fr")
